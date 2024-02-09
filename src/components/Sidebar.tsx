@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CloseIcon from "./CloseIcon";
 
 interface Props {
@@ -8,9 +8,9 @@ interface Props {
 export default ({ children }: Props) => {
   const [sidebar, setSidebar] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => setSidebar(true), 1000);
-  // }, []);
+  const handleClick = () => {
+    setSidebar(!sidebar);
+  };
 
   return (
     <div
@@ -24,7 +24,7 @@ export default ({ children }: Props) => {
         }`}
       >
         <div className="flex w-full justify-end items-center">
-          <button className="text-3xl">
+          <button className="text-3xl" onClick={handleClick}>
             <CloseIcon />
           </button>
         </div>
