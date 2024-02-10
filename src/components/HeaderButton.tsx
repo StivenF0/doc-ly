@@ -9,13 +9,12 @@ interface Props {
 export default ({ type }: Props) => {
   const handleClick = () => {
     setSidebarShow(true);
-    console.log("Clicked!");
   };
 
   if (type === "sidebar") {
     return (
       <button
-        className="h-12 w-12 flex justify-center items-center"
+        className="h-12 w-12 flex justify-center items-center cursor-pointer"
         onClick={handleClick}
       >
         <div className="text-white font-extrabold text-4xl">
@@ -24,10 +23,15 @@ export default ({ type }: Props) => {
       </button>
     );
   } else {
-    <button className="h-12 w-12 flex justify-center items-center">
-      <div className="text-white font-semibold text-4xl">
-        <ArrowBackIcon />
-      </div>
-    </button>;
+    return (
+      <a
+        className="h-12 w-12 flex justify-center items-center cursor-pointer"
+        href="/"
+      >
+        <div className="text-white font-semibold text-4xl">
+          <ArrowBackIcon />
+        </div>
+      </a>
+    );
   }
 };

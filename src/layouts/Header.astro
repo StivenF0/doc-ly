@@ -1,5 +1,6 @@
 ---
 import HeaderButton from "../components/HeaderButton";
+import AddButton from "../components/AddButton";
 
 interface Props {
   type: "sidebar" | "arrow";
@@ -13,8 +14,9 @@ const { type } = Astro.props;
 >
   <HeaderButton {...{ type }} client:only />
   <h1
-    class="font-semibold text-3xl text-white tracking-wide absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+    class="font-semibold text-3xl text-white tracking-wide absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 align-text-top"
   >
     Doc.ly
   </h1>
+  <AddButton client:only />
 </header>
