@@ -11,7 +11,7 @@ const { type } = Astro.props;
 <header
   class="w-full h-16 bg-green-500 flex items-center justify-between px-4 relative"
 >
-  <HeaderButton {...{ type }} />
+  <HeaderButton {...{ type }} client:only />
   <h1
     class="font-semibold text-3xl text-white tracking-wide absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
   >
