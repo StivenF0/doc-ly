@@ -27,6 +27,7 @@ export default ({ type }: Props) => {
       <a
         className="h-12 w-12 flex justify-center items-center cursor-pointer"
         href="/"
+        aria-label="HomePage"
       >
         <div className="text-white font-semibold text-4xl">
           <ArrowBackIcon />
